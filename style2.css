@@ -28,7 +28,7 @@
   /*HEADER*/
   .header { 
     grid-area: header;
-    background-color: rgb(255, 255, 255);
+    background-color: white;
     padding: 0.4%;
    }
    img {
