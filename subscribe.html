@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- HEAD -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:400,700" rel="stylesheet">
+    <link href="style2.css" rel="stylesheet">
+    <script src="scripts.js"></script>
+    <!-- Website top tab -->
+    <title>Ikigai Camera - Subscribe</title>
+    <link rel="icon" type="image/png" href="img/Filmroll-icon.png" />
+</head>
+
+<!-- BODY -->
+
+<body>
+    <!-- grid container -->
+    <div class="grid-container">
+
+        <!-- HEADER -->
+        <div class="header">
+            <img src="img/Logo.jpg" alt="logo" />
+
+        </div>
+
+
+        <!-- CONTENT -->
+        <div class="content">
+            <!-- Progress bar-->
+            <div class="step-progress">
+                <div id="bar-1" class="done">
+                    <div class="num">1</div>
+                </div>
+                <div id="bar-2">
+                    <div class="bar"></div>
+                    <div class="num">2</div>
+                </div>
+                <div id="bar-3">
+                    <div class="bar"></div>
+                    <div class="num">3</div>
+                </div>
+                <div id="bar-4">
+                    <div class="bar"></div>
+                    <div class="num">4</div>
+                </div>
+            </div>
+            <!-- Form -->
+            <form id="myForm">
+
+                <!-- Step 1 -->
+                <div id="step-1" class="step visible">
+                    <div class="form-inputs">
+                        <h1> Step One - Sign up</h1>
+
+                        <h5>First Name</h5>
+                        <input type="text" id="firstname" placeholder="John" required />
+
+                        <h5>Last Name</h5>
+                        <input type="text" id="lastname" placeholder="Smith" required />
+
+                        <h5>Date of Birth</h5>
+                        <input type="text" id="DOB" placeholder="dd/mm/yy" required />
+
+                        <h5>Email Address</h5>
+                        <input type="text" id="email" placeholder="JohnSmith@gmail.com" required />
+
+                        <h5>Contact Number</h5>
+                        <input type="text" id="number" placeholder="Enter your mobile phone number" required />
+                    </div>
+
+                    <div class="step-actions">
+                        <div></div>
+                        <button type="button" onclick="goToStep(2)" value="Next"> Next</button>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div id="step-2" class="step">
+                    <div class="form-inputs">
+                        <h1> Step Two - Shipping Information</h1>
+
+                        <h5>Address</h5>
+                        <input type="text" placeholder="" />
+
+                        <h5>Country</h5>
+                        <select name="Country">
+                            <option value="None"> None </option>
+                            <option value="Australia"> Australia </option>
+
+                        </select>
+
+                        <h5>Post Code</h5>
+                        <input type="text" placeholder="" />
+
+                        <h5>Suburb</h5>
+                        <input type="text" placeholder="" />
+
+                        <h5>State</h5>
+                        <select name="State">
+                            <option value="None"> None </option>
+                            <option value="NSW"> New South Wales </option>
+                            <option value="WA"> Western Australia</option>
+                            <option value="QUE"> Queensland </option>
+                            <option value="SA"> South Australia </option>
+                            <option value="VIC"> Victoria</option>
+                            <option value="TAS"> Tasmania</option>
+                        </select>
+                    </div>
+
+                    <div class="step-actions">
+                        <button type="button" onclick="goToStep(1, true)">Previous</button>
+                        <button type="button" onclick="goToStep(3)">Next</button>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div id="step-3" class="step">
+                    <div class="form-inputs">
+                        <h1> Step Three - Payment</h1>
+                        <div class="card">
+                            <img src="img/Master.png" alt="master" />
+                            <img src="img/visa.png" alt="visa" />
+                            <img src="img/Paypal.png" alt="paypal" />
+                        </div>
+
+
+                        <h5>Card Holder Name</h5>
+                        <input type="text" placeholder="" />
+
+                        <h5>Card Number</h5>
+                        <input type="text" placeholder="" />
+
+                        <h5>Card Expiry Date</h5>
+                        <input type="text" placeholder="dd/mm/yy" />
+
+                        <h5>CVC/CVV/CID</h5>
+                        <input type="cvc" type="text" placeholder="" />
+                    </div>
+
+                    <div class="step-actions">
+                        <button type="button" onclick="goToStep(2, true)">Previous</button>
+                        <button type="button"> <a class="subscribebutton" onclick="submit(event)" href="endpoint.html"
+                                target="_blank">Submit</a></button>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div id="step-4" class="step">
+                    
+                </div>
+
+            </form>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+             
+        </div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- HEAD -->
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css?family=Dosis:400,700" rel="stylesheet" />
+  <link href="styles.css" rel="stylesheet" />
+  <script type="text/javascript" src="./scripts.js"></script>
+  <!-- Website top tab -->
+  <title>Ikigai Camera - Endpoint</title>
+  <link rel="icon" type="image/png" href="img/Filmroll-icon.png" />
+</head>
+
+<body>
+  <!-- grid container -->
+  <div class="grid-container">
+
+    <!-- HEADER -->
+    <div class="header">
+      <div class="logoimage">
+        <img src="img/Logo.jpg" alt="logo" />
+      </div>
+    </div>
+
+    <!-- ASIDE -->
+    <div class="Aside">
+      <div class="aside-container">
+        <h2>Favourites</h2>
+        <ul>
+          <!-- This should remain empty - our content will be dynamically loaded from local storage -->
+        </ul>
+        <button id="clear">Clear Favourites</button>
+      </div>
+
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+
+      <h1>THANK YOU</h1>
+      <div>
+        <p>
+          Thank you <span id="firstname"></span> <span id="lastname"></span> for your subscription.
+        </p>
+        <p>
+          Friendly reminder, for your birthday - <span id="DOB"></span> - you will receive a gift directly in
+          your inbox - <span id="email"></span>.
+        </p>
+      </div>
+      <h2>WELCOME TO THE FILM COMMUNITY</h2>
+
+      <h1> GET INSPIRED </h1>
+      <p> Press on the photographs and scroll down to take a closer look</p>
+
+      <!-- Image in Columns -->
+      <div class="row">
+        <div class="column">
+          <img src="img/train.jpg" alt="Korea" onclick="myFunction(this);">
+          <p>Korea</p>
+          <button id="Add">Add to Favourites</button>
+        </div>
+        <div class="column">
+          <img src="img/Mountains.jpg" alt="Japan" onclick="myFunction(this);">
+          <p>Japan</p>
+          <button id="Add">Add to Favourites</button>
+        </div>
+        <div class="column">
+          <img src="img/snow.jpg" alt="Canada" onclick="myFunction(this);">
+          <p>Canada</p>
+          <button id="Add">Add to Favourites</button>
+        </div>
+        <div class="column">
+          <img src="img/sub.jpg" alt="Texas" onclick="myFunction(this);">
+          <p>Texas</p>
+          <button id="Add">Add to Favourites</button>
+        </div>
+      </div>
+
+      <!-- Image container expanding -->
+      <div class="container">
+        <!-- Close the image icon -->
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+
+        <!-- Expanded image -->
+        <img id="expandedImg" style="width:100%">
+
+        <!-- Image caption -->
+        <div id="imgtext"></div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+            <p>62 Albemarle St, Williamstown North VIC 3016</p> 
+            <p>(02) 8041 7049</p> 
+    </div>
+
+  </div>
+  <script>
+    loadStore()
+  </script>
+</body>
+
+</html>
